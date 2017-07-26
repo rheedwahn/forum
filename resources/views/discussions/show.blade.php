@@ -82,9 +82,9 @@
                         <div class="panel-heading">
                             <img src="{{ asset($r->user->avater) }}" width="40px" height="40px" alt="" /> &nbsp;&nbsp;
                             <span>{{ $r->user->name }}, <b><i>{{ $r->created_at->diffForHumans() }}</i></b></span>
-                            
+
                             @if(!$best_answer)
-                                @if(Auth::id() === $r->user->id)
+                                @if(Auth::user()->id === $r->user->id)
                                     <a href="{{ route('reply.edit', ['id' => $r->id]) }}" class="btn btn-primary btn-xs pull-right" style="margin-left: 9px;"> Edit Reply</a>
                                 @endif
                                 @if(Auth::user()->id === $d->user_id)
