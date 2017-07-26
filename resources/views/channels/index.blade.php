@@ -16,6 +16,9 @@
                         <thead>
                             <tr>
                                 <th>
+                                S/N
+                                </th>
+                                <th>
                                     Name
                                 </th>
                                 <th>
@@ -29,6 +32,7 @@
                         <tbody>
                             @foreach($channels as $channel)
                                 <tr>
+                                    <td>{{ $loop->iteration }}</td>
                                     <td>{{ $channel->title }}</td>
                                     <td>
                                         <a href="{{ route('channels.edit', ['channel' => $channel->slug]) }}" class="btn btn-primary btn-sm">Edit</a>
