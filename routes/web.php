@@ -43,7 +43,7 @@ Route::get('{provider}/auth', [
     'as' => 'social.auth',
 ]);
 
-Route::get('/{provider}_signin/redirect', [
+Route::get('/{provider}/redirect', [
     'uses' => 'SocialAuthController@auth_callback',
     'as' => 'social.callback',
 ]);
