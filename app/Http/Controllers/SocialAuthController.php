@@ -23,7 +23,7 @@ class SocialAuthController extends Controller
 
             $user->email = $details->email;
 
-            $user->name = $details->full_name;
+            $user->name = $details->full_name; 
 
             $user->save();
 

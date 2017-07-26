@@ -15,7 +15,7 @@ return [
         'google' => [
             'client_id' => '503301328328-ie9345fsv66j71bi5hklp0or84ljg5kj.apps.googleusercontent.com',
             'client_secret' => 'EjUFIurJfUExh6UXD0p6Rd_a',
-            'redirect_uri' => 'http://rheedforum.herokuapp.com/oauth2callback',
+            'redirect_uri' => 'http://rheedforum.herokuapp.com/google/redirect',
             'scope' => [],
         ],
         'github' => [
