@@ -141,7 +141,11 @@ class ChannelsController extends Controller
 
         foreach ($channels->discussions as $discussions) {
             $discussions->delete();
-            $discussions->best_answer->delete();
+            if($discussions->best_answer)
+            {
+                $discussions->best_answer->delete();
+            }
+            
         }
 
         
