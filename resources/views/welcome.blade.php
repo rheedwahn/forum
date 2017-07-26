@@ -86,7 +86,7 @@
                     <a href="{{ route('social.auth', ['provider' => 'github']) }}">GitHub</a>
                     <a href="{{ route('social.auth', ['provider' => 'google']) }}">Google</a>
                     <a href="{{ route('social.auth', ['provider' => 'linkedin']) }}">Linkedin</a>
-                    <a href="{{ route('social.auth', ['provider' => 'twitter']) }}">Twitter</a>
+                    <a href="{{ route('social.auth', ['provider' => 'twitter_signin']) }}">Twitter</a>
                     <a href="{{ url('/login') }}">Email</a>
                 </div>
             </div>
