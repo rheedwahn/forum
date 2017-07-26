@@ -40,6 +40,7 @@
 					<button class="btn btn-success">Create Discussion</button>
 				</div>
 			</form>
+			<a href="http://www.unexpected-vortices.com/sw/rippledoc/quick-markdown-example.html">Learn how to use markdown</a>
         </div>
     </div>
 
