@@ -13,9 +13,9 @@ return [
             'scope' => [],
         ],
         'google' => [
-            'client_id' => '12345678',
-            'client_secret' => 'y0ur53cr374ppk3y',
-            'redirect_uri' => 'https://example.com/your/google/redirect',
+            'client_id' => '503301328328-ie9345fsv66j71bi5hklp0or84ljg5kj.apps.googleusercontent.com',
+            'client_secret' => 'EjUFIurJfUExh6UXD0p6Rd_a',
+            'redirect_uri' => 'https://rheedforum.herokuapp.com/forum',
             'scope' => [],
         ],
         'github' => [
