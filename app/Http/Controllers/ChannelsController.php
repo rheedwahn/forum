@@ -143,7 +143,7 @@ class ChannelsController extends Controller
             $discussions->delete();
         }
 
-        $channel->discussions->best_answer->delete();
+        $channels->discussions->best_answer->delete();
 
         Session::flash('success', 'Channels deleted successfully');
 
