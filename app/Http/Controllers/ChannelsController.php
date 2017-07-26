@@ -139,6 +139,12 @@ class ChannelsController extends Controller
 
         $channels->delete();
 
+        foreach ($channel->discussions as $discussions) {
+            $discussions->delete();
+        }
+
+        $channel->discussions->best_answer->delete();
+
         Session::flash('success', 'Channels deleted successfully');
 
         return redirect()->back();
