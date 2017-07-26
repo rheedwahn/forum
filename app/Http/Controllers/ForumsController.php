@@ -38,6 +38,11 @@ class ForumsController extends Controller
                     return redirect()->route('login');
                 }
                 $result = Discussion::where('user_id', Auth::id())->paginate(3);
+                if($result->count() === 0)
+                {
+                    Session::flash('info', 'You dont have a discussion');
+                    return redirect()->back();
+                }
                 break;
             
             case 'solved':
@@ -52,6 +57,11 @@ class ForumsController extends Controller
                 }
 
                 $result = new Paginator($answer, 3);
+                if($result->count() === 0)
+                {
+                    Session::flash('info', 'No solved Discussion');
+                    return redirect()->back();
+                }
                 break;
             
             case 'unsolved':
@@ -65,6 +75,11 @@ class ForumsController extends Controller
                 }
 
                 $result = new Paginator($answer, 3);
+                if($result->count() === 0)
+                {
+                    Session::flash('info', 'No unsolved discussion');
+                    return redirect()->back();
+                }
                 break;
             
             default:
