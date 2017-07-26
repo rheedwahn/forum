@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->bigInteger('points')->default(50);
             $table->string('email')->unique();
             $table->string('password')->nullable();
+            $table->string('best_answer')->nullable()->default(0);
             $table->rememberToken();
             $table->timestamps();
         });

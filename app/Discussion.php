@@ -37,7 +37,7 @@ class Discussion extends Model
 
     public function is_followed_by_auth_user()
     {
-        $id = Auth::user()->id;
+        $id = Auth::user()->id; 
 
         $follower = array();
 

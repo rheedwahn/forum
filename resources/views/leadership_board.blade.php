@@ -12,11 +12,13 @@
                     <span>{{ $users->name }}</span>
                     </div>
                     <div class="panel-body">
+                    <?php $c = 0; ?>
                         @foreach($best_answer as $b)
                             @if($users->id === $b->replier_id)
-                                <b>{{ count($b->replier_id) }}</b> Best Answer Award(s)</br>
+                               <?php $c++; ?>
                             @endif
                         @endforeach
+                        <b> {{ $c }} Best Answer(s) Award </b></br>  
                         <b>{{ $users->points }}</b> Experience
                     </div>
                 </div>

@@ -97,7 +97,7 @@ class ForumsController extends Controller
      */
     public function channel($slug)
     {
-        $channel = Channel::where('slug', $slug)->first();
+        $channel = Channel::where('slug', $slug)->first(); 
 
         return view('channel')->with('discussion', $channel->discussions()->paginate(5));
 
@@ -105,6 +105,8 @@ class ForumsController extends Controller
 
     public function leadershipBoard()
     {
+        $reply = array();
+
         return view('leadership_board')->with('user', User::orderBy('points', 'desc')->paginate(10))
                                        ->with('best_answer', BestAnswer::all());
     }
