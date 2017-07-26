@@ -27,7 +27,7 @@ class ForumsController extends Controller
      */
     public function index()
     {
-        $discussions = Discussion::orderBy('created_at', 'desc')->paginate(3);
+        $discussions = Discussion::orderBy('created_at', 'desc')->paginate(4);
 
         switch (request('filter'))
         {
@@ -37,7 +37,7 @@ class ForumsController extends Controller
                     Session::flash('info', 'You need to login to view all your discussions');
                     return redirect()->route('login');
                 }
-                $result = Discussion::where('user_id', Auth::id())->paginate(3);
+                $result = Discussion::where('user_id', Auth::id())->paginate(4);
                 if($result->count() === 0)
                 {
                     Session::flash('info', 'You dont have a discussion');
@@ -56,7 +56,7 @@ class ForumsController extends Controller
                     }
                 }
 
-                $result = new Paginator($answer, 3);
+                $result = new Paginator($answer, 4);
                 if($result->count() === 0)
                 {
                     Session::flash('info', 'No solved Discussion');
@@ -74,7 +74,7 @@ class ForumsController extends Controller
                     }
                 }
 
-                $result = new Paginator($answer, 3);
+                $result = new Paginator($answer, 4);
                 if($result->count() === 0)
                 {
                     Session::flash('info', 'No unsolved discussion');
@@ -83,7 +83,7 @@ class ForumsController extends Controller
                 break;
             
             default:
-                $result = Discussion::orderBy('created_at', 'desc')->paginate(3);
+                $result = Discussion::orderBy('created_at', 'desc')->paginate(4);
                 break;
         }
 
@@ -121,7 +121,7 @@ class ForumsController extends Controller
 
         $search = $request->search;
 
-        $result = Discussion::where('title', 'LIKE', "%{$search}%")->paginate(3);
+        $result = Discussion::where('title', 'LIKE', "%{$search}%")->paginate(4);
 
         return view('result')->with('discussion', $result)
                              ->with('search_res', $request->search);
