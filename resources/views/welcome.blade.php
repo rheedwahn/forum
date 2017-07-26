@@ -81,11 +81,12 @@
                 <div class="title m-b-md">
                     <a href="{{ route('forum') }}" style="text-decoration: none; color:black; ">Forum by RHEEDtech Solutions</a>
                 </div>
-
+                <p>Sign in with any of the following</p>
                 <div class="links">
                     <a href="{{ route('social.auth', ['provider' => 'github']) }}">GitHub</a>
                     <a href="{{ route('social.auth', ['provider' => 'google']) }}">Google</a>
                     <a href="{{ route('social.auth', ['provider' => 'linkedin']) }}">Linkedin</a>
+                    <a href="{{ route('social.auth', ['provider' => 'twitter']) }}">Twitter</a>
                     <a href="{{ url('/login') }}">Email</a>
                 </div>
             </div>

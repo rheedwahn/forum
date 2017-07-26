@@ -42,5 +42,11 @@ return [
             'redirect_uri' => 'https://example.com/your/soundcloud/redirect',
             'scope' => [],
         ],
+        'twitter' => [
+            'client_id' => 'UQTQ8NbFmcg8hSExvY6MHLn5n',
+            'client_secret' => 'mKZ95t1KVBgEb3BcA5CWMRnV1eWBi4PJA8UFLpPNY0Hd1KQyHx',
+            'redirect_uri' => 'http://rheedforum.herokuapp.com/twitter/redirect',
+            'scope' => [],
+        ],
     ],
 ];
