@@ -18,7 +18,9 @@
                                <?php $c++; ?>
                             @endif
                         @endforeach
+                        @if($c > 0)
                         <b> {{ $c }} Best Answer(s) Award </b></br>  
+                        @endif
                         <b>{{ $users->points }}</b> Experience
                     </div>
                 </div>

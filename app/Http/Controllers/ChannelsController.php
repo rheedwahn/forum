@@ -141,18 +141,8 @@ class ChannelsController extends Controller
 
         foreach ($channels->discussions as $discussions) {
             $discussions->delete();
-            if($discussions->best_answer)
-            {
-                $discussions->best_answer->delete();
 
-                $discussions->user->points -= 30;
-
-                $discussions->user->save();
             }
-            
-        }
-
-        
 
         Session::flash('success', 'Channels deleted successfully');
 
