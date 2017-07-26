@@ -139,7 +139,7 @@ class ChannelsController extends Controller
 
         $channels->delete();
 
-        foreach ($channel->discussions() as $discussions) {
+        foreach ($channels->discussions as $discussions) {
             $discussions->delete();
         }
 
