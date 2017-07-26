@@ -82,16 +82,18 @@
                         <div class="panel-heading">
                             <img src="{{ asset($r->user->avater) }}" width="40px" height="40px" alt="" /> &nbsp;&nbsp;
                             <span>{{ $r->user->name }}, <b><i>{{ $r->created_at->diffForHumans() }}</i></b></span>
-                            @if(empty($best_answer))
-                            @if(!$best_answer)
-                                @if(Auth::user()->id === $r->user->id)
-                                    <a href="{{ route('reply.edit', ['id' => $r->id]) }}" class="btn btn-primary btn-xs pull-right" style="margin-left: 9px;"> Edit Reply</a>
-                                @endif
-                                @if(Auth::user()->id === $d->user_id)
-                                    <a href="{{ route('reply.bestanswer', ['id' => $r->id]) }}" class="btn btn-info btn-xs pull-right" > Mark as best answer</a>  
+                        
+                            @if($b->count() > 0)
+                                @if(!$best_answer)
+                                    @if(Auth::user()->id === $r->user->id)
+                                        <a href="{{ route('reply.edit', ['id' => $r->id]) }}" class="btn btn-primary btn-xs pull-right" style="margin-left: 9px;"> Edit Reply</a>
+                                    @endif
+                                    @if(Auth::user()->id === $d->user_id)
+                                        <a href="{{ route('reply.bestanswer', ['id' => $r->id]) }}" class="btn btn-info btn-xs pull-right" > Mark as best answer</a>  
+                                    @endif
                                 @endif
                             @endif
-                            @endif
+                            
                         </div>
 
                         <div class="panel-body">
