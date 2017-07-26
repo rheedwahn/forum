@@ -25,9 +25,9 @@ return [
             'scope' => [],
         ],
         'linkedin' => [
-            'client_id' => '12345678',
-            'client_secret' => 'y0ur53cr374ppk3y',
-            'redirect_uri' => 'https://example.com/your/linkedin/redirect',
+            'client_id' => '77rc4tznwxxh2l',
+            'client_secret' => 'hq2KtTPG6SvD0PGh',
+            'redirect_uri' => 'http://rheedforum.herokuapp.com/linkedin/redirect',
             'scope' => [],
         ],
         'instagram' => [
