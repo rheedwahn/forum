@@ -144,6 +144,10 @@ class ChannelsController extends Controller
             if($discussions->best_answer)
             {
                 $discussions->best_answer->delete();
+
+                $discussions->user->points -= 30;
+
+                $discussions->user->save();
             }
             
         }
