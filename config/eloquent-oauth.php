@@ -21,7 +21,7 @@ return [
         'github' => [
             'client_id' => 'ad227750608019a1d2ca',
             'client_secret' => 'b0caa49c2d22feb0216953cf3b8a079da178bc52',
-            'redirect_uri' => 'http://127.0.0.1:8000/github/redirect',
+            'redirect_uri' => 'http://rheedforum.herokuapp.com/github/redirect',
             'scope' => [],
         ],
         'linkedin' => [
